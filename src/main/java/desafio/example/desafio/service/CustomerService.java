@@ -20,7 +20,7 @@ public class CustomerService {
         return customerRepository.save(customer);
     }
 
-    public List<Customer> obtenerTodos(){
+    public List<Customer> getEveryone(){
         return customerRepository.findAll();
     }
 

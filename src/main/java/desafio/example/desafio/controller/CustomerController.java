@@ -27,7 +27,7 @@ public class CustomerController {
 
     @GetMapping("customers")
     public ResponseEntity<List<Customer>> getAllCustomers() {
-        List<Customer> customers = customerService.obtenerTodos();
+        List<Customer> customers = customerService.getEveryone();
         return new ResponseEntity<>(customers, HttpStatus.OK);
     }
 
