@@ -9,18 +9,20 @@ import java.util.Date;
 
 @Entity
 @Data
-@Table(name="tbl_customer")
+@Table(name = "tbl_customer")
 public class Customer {
     @Id
-    private Long id;
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
+    private Long id;
 
-    private String firsName;
-    private String  lastName;
+    private String firstName; // Corrección aquí
+    private String lastName;
     private String email;
     private Date createAt;
 
-
-
+    // Constructores, getters, setters, etc.
 }
+
+
+

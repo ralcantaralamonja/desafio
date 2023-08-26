@@ -32,7 +32,7 @@ public class CustomerService {
         Customer existingCustomer = customerRepository.findById(id)
                 .orElseThrow(() -> new EntityNotFoundException("Cliente no encontrado"));
 
-        existingCustomer.setFirsName(updatedCustomer.getFirsName());
+        existingCustomer.setFirstName(updatedCustomer.getFirstName()); // Corregido el nombre del método
         existingCustomer.setLastName(updatedCustomer.getLastName());
         existingCustomer.setEmail(updatedCustomer.getEmail());
         // Actualiza otros campos

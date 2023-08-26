@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/customers")
+@RequestMapping("/")
 public class CustomerController {
     private final CustomerService customerService;
 
@@ -25,7 +25,7 @@ public class CustomerController {
         return new ResponseEntity<>(createdCustomer, HttpStatus.CREATED);
     }
 
-    @GetMapping
+    @GetMapping("customers")
     public ResponseEntity<List<Customer>> getAllCustomers() {
         List<Customer> customers = customerService.obtenerTodos();
         return new ResponseEntity<>(customers, HttpStatus.OK);
